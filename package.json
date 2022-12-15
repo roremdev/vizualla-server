@@ -1,0 +1,88 @@
+{
+    "name": "vizualla-server",
+    "description": "Server for Vizualla Platform",
+    "version": "0.0.0",
+    "main": "src/main.ts",
+    "scripts": {
+        "dev": "nest start --watch",
+        "format": "pnpm dlx prettier --write ."
+    },
+    "dependencies": {
+        "@nestjs/common": "9.2.1",
+        "@nestjs/core": "9.2.1",
+        "@nestjs/platform-express": "9.2.1",
+        "module-alias": "2.2.2",
+        "reflect-metadata": "0.1.13",
+        "rxjs": "7.6.0"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "17.3.0",
+        "@commitlint/config-conventional": "17.3.0",
+        "@types/node": "18.11.14",
+        "husky": "8.0.2",
+        "prettier": "2.8.1",
+        "source-map-support": "0.5.21",
+        "ts-node": "10.9.1",
+        "typescript": "4.9.4"
+    },
+    "_moduleAliases": {
+        "@controllers": "./src/controllers",
+        "@modules": "./src/modules",
+        "@services": "./src/services"
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "semi": false,
+        "singleQuote": true
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ],
+        "parserPreset": "conventional-changelog-conventionalcommits",
+        "rules": {
+            "type-case": [
+                2,
+                "always",
+                "lower-case"
+            ],
+            "type-empty": [
+                2,
+                "never"
+            ],
+            "type-enum": [
+                2,
+                "always",
+                [
+                    "feat",
+                    "fix",
+                    "docs",
+                    "style",
+                    "refactor",
+                    "test",
+                    "ci",
+                    "work",
+                    "chore",
+                    "remove"
+                ]
+            ],
+            "scope-empty": [
+                0
+            ],
+            "subject-case": [
+                2,
+                "always",
+                "lower-case"
+            ],
+            "subject-empty": [
+                2,
+                "never"
+            ],
+            "subject-full-stop": [
+                2,
+                "never",
+                "."
+            ]
+        }
+    }
+}

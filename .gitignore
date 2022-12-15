@@ -1,0 +1,6 @@
+# IDE
+.idea
+
+# Core
+dist
+node_modules
