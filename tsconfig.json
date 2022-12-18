@@ -12,6 +12,8 @@
         "sourceMap": true,
         "resolveJsonModule": true,
         "paths": {
+            "@/*": ["./*"],
+            "@config/*": ["./src/config/*"],
             "@controllers/*": ["./src/controllers/*"],
             "@modules/*": ["./src/modules/*"],
             "@services/*": ["./src/services/*"]
