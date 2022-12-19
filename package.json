@@ -15,7 +15,8 @@
         "dotenv-expand": "10.0.0",
         "module-alias": "2.2.2",
         "reflect-metadata": "0.1.13",
-        "rxjs": "7.6.0"
+        "rxjs": "7.6.0",
+        "zod": "3.20.2"
     },
     "devDependencies": {
         "@commitlint/cli": "17.3.0",
@@ -34,7 +35,8 @@
         "@db": "./src/db",
         "@entities": "./src/entities",
         "@modules": "./src/modules",
-        "@services": "./src/services"
+        "@services": "./src/services",
+        "@validators": "./src/validators"
     },
     "prettier": {
         "tabWidth": 4,
