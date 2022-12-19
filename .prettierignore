@@ -1,0 +1,4 @@
+# Core
+.husky
+node_modules
+pnpm-lock.yaml

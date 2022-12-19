@@ -1,7 +1,10 @@
 import { PipeTransform, Injectable, BadRequestException } from '@nestjs/common'
 import { Schema } from 'zod'
 
-import { createPublishSchema } from '@validators/publish.validator'
+import {
+    createPublishSchema,
+    editPublishSchema,
+} from '@validators/publish.validator'
 
 @Injectable()
 export class ZodValidationPipe implements PipeTransform {
@@ -14,4 +17,4 @@ export class ZodValidationPipe implements PipeTransform {
     }
 }
 
-export { createPublishSchema }
+export { createPublishSchema, editPublishSchema }
