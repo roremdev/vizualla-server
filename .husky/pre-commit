@@ -9,13 +9,11 @@ if [[ "$BRANCH_NAME" =~ $MAIN_PATTERN_NAME ]] || [[ "$BRANCH_NAME" =~ $FEATURE_P
   exit 0
 fi
 
-if [[ ! "$BRANCH_NAME" =~ MAIN_PATTERN_NAME ]]; then
-  echo "ERROR: The branch name does not follow the required pattern (development|production|staging)."
-  exit 1
-fi
-
-if [[ ! "$BRANCH_NAME" =~ $FEATURE_PATTERN_NAME ]]; then
-  echo "ERROR: The branch name does not follow the required pattern ([feat | refactor | fix]/TIC-NUMBER)."
+if [[ ! "$BRANCH_NAME" =~ MAIN_PATTERN_NAME ]] || [[ ! "$BRANCH_NAME" =~ $FEATURE_PATTERN_NAME ]]; then
+  echo "⧗   input:  $BRANCH_NAME"
+  echo "✖   branch name must be one of:"
+  echo "        - [feat, refactor, fix]/TIC-NUMBER"
+  echo "        - [development, staging, production]"
   exit 1
 fi
 
