@@ -14,7 +14,7 @@ export class AccountsController {
     @Get()
     getAccounts(
         @Query('offset') offset = 0,
-        @Query('limit') limit = 10
+        @Query('limit') limit = 10,
     ): Account[] {
         return this.accountService.findAccounts()
     }

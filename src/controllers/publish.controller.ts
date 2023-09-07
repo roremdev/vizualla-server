@@ -34,7 +34,7 @@ export class PublishController {
     @UsePipes(new ZodValidationPipe(editPublishSchema))
     patchPublish(
         @Param('id', ParseIntPipe) id: number,
-        @Body() publish: z.infer<typeof createPublishSchema>
+        @Body() publish: z.infer<typeof createPublishSchema>,
     ) {
         console.log(publish)
     }
