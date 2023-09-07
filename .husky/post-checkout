@@ -1,4 +1,13 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-exit 1
+BRANCH_NAME=$(git symbolic-ref --short HEAD)
+PATTERN_NAME="^(feat|refactor|fix)/TIC-[0-9]{1,4}$"
+ERROR_MESSAGE="ERROR: The branch name does not follow the required pattern ([feat | refactor | fix]/TIC-NUMBER)."
+
+if [ "$BRANCH_NAME" = "$PATTERN_NAME" ]; then
+  echo "${ERROR_MESSAGE}"
+  exit 1
+fi
+
+exit 0
