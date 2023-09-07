@@ -3,11 +3,9 @@
 
 BRANCH_NAME=$(git symbolic-ref --short HEAD)
 PATTERN_NAME="^(feat|refactor|fix)/TIC-[0-9]{1,4}$"
-ERROR_MESSAGE="ERROR: The branch name does not follow the required pattern ([feat | refactor | fix]/TIC-NUMBER)."
+#ERROR_MESSAGE="ERROR: The branch name does not follow the required pattern ([feat | refactor | fix]/TIC-NUMBER)."
 
-if [ "$BRANCH_NAME" = "$PATTERN_NAME" ]; then
-  echo "${ERROR_MESSAGE}"
-  exit 1
-fi
+echo "${BRANCH_NAME}"
+echo "$BRANCH_NAME" = "$PATTERN_NAME"
 
-exit 0
+exit 1
